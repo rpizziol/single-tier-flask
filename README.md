@@ -36,4 +36,8 @@ A simple single-tier Python application built with Flask.
    http://127.0.0.1:8080
    ```
 
+## Author
+
+* [Roberto Pizziol](https://github.com/rpizziol)
+
 
