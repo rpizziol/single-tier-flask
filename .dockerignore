@@ -1,0 +1,18 @@
+# Python virtual environment directory
+venv/
+
+# Git directory and files
+.git/
+.gitignore
+
+# Dockerfile itself and other Docker configuration files
+Dockerfile
+docker-compose.yml
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# README or documentation files that are not needed in the final image
+README.md
