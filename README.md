@@ -36,6 +36,16 @@ A simple single-tier Python application built with Flask.
    http://127.0.0.1:8080
    ```
 
+## Docker Hub
+
+This application is available on Docker Hub. You can pull the Docker image using the following command:
+
+```bash
+docker pull rpizziol/single-tier-app
+```
+
+For more details, visit: [https://hub.docker.com/r/rpizziol/single-tier-app](https://hub.docker.com/r/rpizziol/single-tier-app)
+
 ## Author
 
 * [Roberto Pizziol](https://github.com/rpizziol)
