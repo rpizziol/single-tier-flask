@@ -1,0 +1,36 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: single-tier
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: single-tier
+  template:
+    metadata:
+      labels:
+        app: single-tier
+    spec:
+      containers:
+      - name: single-tier-container
+        image: docker.io/rpizziol/single-tier-app:v1
+        ports:
+        - containerPort: 8080 # The port our Gunicorn server is listening on
+        
+        # --- Configuration via Environment Variables ---
+        env:
+          - name: BUSY_WAIT_MEAN
+            value: "1.0" # Example: set the mean duration to 1.0 second
+          - name: GUNICORN_WORKERS
+            value: "1"   # Example: run with a single worker process
+
+        # --- Resource Requests and Limits ---
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
