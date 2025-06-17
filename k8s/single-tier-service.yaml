@@ -1,0 +1,18 @@
+# service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: single-tier
+spec:
+  type: LoadBalancer
+  selector:
+    app: single-tier
+
+  ports:
+    - protocol: TCP
+      # The port that the external Load Balancer will listen on.
+      # Users will access the service via http://[EXTERNAL_IP]:80
+      port: 80
+      # The port on the container that the traffic should be forwarded to.
+      # This must match the containerPort in your deployment.yaml (8080 for Gunicorn).
+      targetPort: 8080

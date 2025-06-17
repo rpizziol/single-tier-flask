@@ -52,13 +52,13 @@ For more details, visit the Docker Hub page: [rpizziol/single-tier-app](https://
 
 1. Ensure your Kubernetes cluster is properly configured and running.
 
-2. (Optional) Modify the environment variables in the `k8s/deployment.yaml` file:
+2. (Optional) Modify the environment variables in the `k8s/single-tier-app-deployment.yaml` file:
    - `GUNICORN_WORKERS`: Adjust the number of Gunicorn workers as needed.
    - `BUSY_WAIT_MEAN`: Set the desired mean value for busy waiting (default is `1.0`).
 
 3. Deploy the application to the cluster:
    ```bash
-   kubectl apply -f k8s/deployment.yaml
+   kubectl apply -f k8s/single-tier-app-deployment.yaml
    ```
 
 ## Author
